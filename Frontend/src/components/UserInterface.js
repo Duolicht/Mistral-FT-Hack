@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Bars, CirclesWithBar, Audio, Puff } from "react-loader-spinner";
-import ngrokurl from "./api.js"
+import { ngrokurl } from "./api.js"
 import ChatMessage from "./ChatMessage";
 
 export const UserInterface = () => {

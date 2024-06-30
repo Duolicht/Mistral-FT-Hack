@@ -1,1 +1,1 @@
-const ngrokurl = "https://9f9b-104-196-11-61.ngrok-free.app";
+export const ngrokurl = "https://523e-34-19-19-170.ngrok-free.app";

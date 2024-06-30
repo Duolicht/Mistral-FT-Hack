@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Bars, CirclesWithBar, Audio, Puff, Dna } from "react-loader-spinner";
 import { FaMicrophone } from "react-icons/fa";
 import { marked } from "marked";
-import ngrokurl from "./api.js"
+import { ngrokurl } from "./api.js"
 
 const ChatMessage = ({ type, content }) => {
 
