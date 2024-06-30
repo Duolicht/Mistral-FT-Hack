@@ -109,7 +109,7 @@ const ChatMessage = ({ type, content }) => {
     try {
       setLoading(true); // Set loading to true when the request starts
 
-      const response = await fetch(ngrokurl + "/gemini/", {
+      const response = await fetch(ngrokurl + "/mistral/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
