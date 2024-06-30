@@ -1,14 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Bars, CirclesWithBar, Audio, Puff, Dna } from "react-loader-spinner";
 import { FaMicrophone } from "react-icons/fa";
-import ReactMarkdown from "react-markdown";
 import { marked } from "marked";
 
 const ChatMessage = ({ type, content }) => {
-  const [transcription, setTranscription] = useState("");
- 
-  //workaround to double click get route
-  const [count, setCount] = useState(0);
 
   //Falcon 40B response
   const [falcon, setFalcon] = useState(null);
@@ -22,15 +17,7 @@ const ChatMessage = ({ type, content }) => {
 
   const [clickspeak, setclickspeak] = useState(false);
 
-  //NER Endpoint useState
-  const [ner, setNer] = useState([]);
-
-  const [correctedText, setCorrectedText] = useState("");
-
-  const mimeType = "audio/webm";
   const ngrokurl = "https://9f9b-104-196-11-61.ngrok-free.app";
-  //in built api reference
-  const mediaRecorder = useRef(null);
 
   const handleSound = async () => {
     setclickspeak(true);
@@ -63,44 +50,6 @@ const ChatMessage = ({ type, content }) => {
       alert("An error occurred while replying to the audio");
     }
     setclickspeak(false);
-  };
-
-  // Get Location via NER API CALL
-  const handleNER = async () => {
-    try {
-      const response = await fetch(ngrokurl + "/ner/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json", // Specify JSON content type
-          token: localStorage.getItem("access_token"),
-        },
-        body: JSON.stringify({
-          text: content,
-          emotion: "Anger",
-        }),
-      });
-
-      if (response.ok) {
-        const nerData = await response.json();
-        setNer(nerData.LOC);
-        console.log(content);
-        console.log(nerData.LOC);
-        const url = `https://www.google.com/maps/dir/${nerData.LOC[0]}+station/${nerData.LOC[1]}+station`;
-        //to only open new window when double clicked
-        if (true) {
-          window.open(url, "_blank", "noreferrer");
-          setCount(0);
-        } else {
-          setCount(count + 1);
-          console.log(count);
-        }
-      } else {
-        alert("NER failed");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("Error while fetching location");
-    }
   };
 
   const [loading, setLoading] = useState(false); // New loading state
