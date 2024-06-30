@@ -58,8 +58,7 @@ Retrieve job details, select sample instructions from evaluation data, and inter
 
 WandB Fine-tuning Metrics -
 
-![image](https://github.com/elucidator8918/Mistral-FT-Hack/assets/113273376/29f8cb8b-7178-427d-88a0-1ecc54b15830)
-
+![Screenshot from 2024-06-30 23-24-27](https://github.com/Duolicht/Mistral-FT-Hack/assets/174272054/eb02548f-1ab7-417c-87f3-2a0c497db285)
 
 ## Dataset <a name="dataset"></a>
 
