@@ -21,5 +21,3 @@ In response to the pressing issue of clinicians' overwhelming documentation burd
 Our system ensures that generated notes are not only accurate but also contextually aligned with each patient encounter.
 
 **Dataset Used:** [Asclepius-Synthetic-Clinical-Notes](https://huggingface.co/datasets/starmpcc/Asclepius-Synthetic-Clinical-Notes)
-
-Explore the repository for detailed implementation and insights into ClinicalSage.
