@@ -26,6 +26,6 @@ To run the backend, follow these steps:
 ```javascript
 // api.js
 
-const ngrokUrl = "YOUR_NGROK_URL_HERE";
+export const ngrokUrl = "YOUR_NGROK_URL_HERE";
 
 // rest of the code
