@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Bars, CirclesWithBar, Audio, Puff } from "react-loader-spinner";
-import { FaMicrophone } from "react-icons/fa";
+import ngrokurl from "./api.js"
 import ChatMessage from "./ChatMessage";
 
 export const UserInterface = () => {
@@ -30,7 +30,6 @@ export const UserInterface = () => {
   const [suggestions, setSuggestions] = useState([]);
 
   const mimeType = "audio/webm";
-  const ngrokurl = "https://9f9b-104-196-11-61.ngrok-free.app";
   //in built api reference
   const mediaRecorder = useRef(null);
 

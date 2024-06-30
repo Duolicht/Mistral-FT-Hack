@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Bars, CirclesWithBar, Audio, Puff, Dna } from "react-loader-spinner";
 import { FaMicrophone } from "react-icons/fa";
 import { marked } from "marked";
+import ngrokurl from "./api.js"
 
 const ChatMessage = ({ type, content }) => {
 
@@ -16,8 +17,6 @@ const ChatMessage = ({ type, content }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const [clickspeak, setclickspeak] = useState(false);
-
-  const ngrokurl = "https://9f9b-104-196-11-61.ngrok-free.app";
 
   const handleSound = async () => {
     setclickspeak(true);
