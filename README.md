@@ -1,6 +1,6 @@
-# ClinicalSage AI Documentation System
+# AI Clinical Documentation System
 
-Welcome to ClinicalSage, an AI-based documentation system designed to address the challenges faced by clinicians in medical note creation. This repository houses the components of ClinicalSage, including notebooks for model development, a frontend for user interaction, and a backend for data processing and model deployment.
+Welcome to our project, an AI-based documentation system designed to address the challenges faced by clinicians in medical note creation. This repository houses the components of ClinicalSage, including notebooks for model development, a frontend for user interaction, and a backend for data processing and model deployment.
 
 ## Repository Structure
 
